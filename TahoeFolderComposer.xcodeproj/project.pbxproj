@@ -13,6 +13,9 @@
 		7E0000072C00000000000001 /* composite-back-paper-front.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0000082C00000000000001 /* composite-back-paper-front.png */; };
 		7E0000282C00000000000001 /* FolderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000292C00000000000001 /* FolderStyle.swift */; };
 		7E00002A2C00000000000001 /* RenderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00002B2C00000000000001 /* RenderSettings.swift */; };
+		7E00002C2C00000000000001 /* TestImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00002D2C00000000000001 /* TestImages.swift */; };
+		7E00002E2C00000000000001 /* PNGExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00002F2C00000000000001 /* PNGExporterTests.swift */; };
+		7E0000302C00000000000001 /* PNGExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000312C00000000000001 /* PNGExporter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 		7E00000D2C00000000000001 /* TahoeFolderComposerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TahoeFolderComposerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E0000292C00000000000001 /* FolderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderStyle.swift; sourceTree = "<group>"; };
 		7E00002B2C00000000000001 /* RenderSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderSettings.swift; sourceTree = "<group>"; };
+		7E00002D2C00000000000001 /* TestImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImages.swift; sourceTree = "<group>"; };
+		7E00002F2C00000000000001 /* PNGExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNGExporterTests.swift; sourceTree = "<group>"; };
+		7E0000312C00000000000001 /* PNGExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNGExporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,8 @@
 		7E0000122C00000000000001 /* TahoeFolderComposerTests */ = {
 			isa = PBXGroup;
 			children = (
+				7E00002D2C00000000000001 /* TestImages.swift */,
+				7E00002F2C00000000000001 /* PNGExporterTests.swift */,
 			);
 			path = TahoeFolderComposerTests;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 		7E0000172C00000000000001 /* Exporting */ = {
 			isa = PBXGroup;
 			children = (
+				7E0000312C00000000000001 /* PNGExporter.swift */,
 			);
 			path = Exporting;
 			sourceTree = "<group>";
@@ -236,6 +245,7 @@
 				7E0000032C00000000000001 /* ContentView.swift in Sources */,
 				7E0000282C00000000000001 /* FolderStyle.swift in Sources */,
 				7E00002A2C00000000000001 /* RenderSettings.swift in Sources */,
+				7E0000302C00000000000001 /* PNGExporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E00002C2C00000000000001 /* TestImages.swift in Sources */,
+				7E00002E2C00000000000001 /* PNGExporterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
