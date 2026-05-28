@@ -11,6 +11,8 @@
 		7E0000032C00000000000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000042C00000000000001 /* ContentView.swift */; };
 		7E0000052C00000000000001 /* composite-back-front.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0000062C00000000000001 /* composite-back-front.png */; };
 		7E0000072C00000000000001 /* composite-back-paper-front.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0000082C00000000000001 /* composite-back-paper-front.png */; };
+		7E0000282C00000000000001 /* FolderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000292C00000000000001 /* FolderStyle.swift */; };
+		7E00002A2C00000000000001 /* RenderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00002B2C00000000000001 /* RenderSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,8 @@
 		7E0000082C00000000000001 /* composite-back-paper-front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "composite-back-paper-front.png"; sourceTree = "<group>"; };
 		7E00000C2C00000000000001 /* TahoeFolderComposer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TahoeFolderComposer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E00000D2C00000000000001 /* TahoeFolderComposerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TahoeFolderComposerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E0000292C00000000000001 /* FolderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderStyle.swift; sourceTree = "<group>"; };
+		7E00002B2C00000000000001 /* RenderSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		7E0000152C00000000000001 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7E0000292C00000000000001 /* FolderStyle.swift */,
+				7E00002B2C00000000000001 /* RenderSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,6 +234,8 @@
 			files = (
 				7E0000012C00000000000001 /* TahoeFolderComposerApp.swift in Sources */,
 				7E0000032C00000000000001 /* ContentView.swift in Sources */,
+				7E0000282C00000000000001 /* FolderStyle.swift in Sources */,
+				7E00002A2C00000000000001 /* RenderSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
