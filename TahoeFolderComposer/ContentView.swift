@@ -66,6 +66,10 @@ struct ContentView: View {
             .frame(width: 640, height: 620)
         }
         .frame(width: 900, height: 620)
+        .onChange(of: folderStyle) {
+            renderedImage = nil
+            statusMessage = "다시 렌더하세요."
+        }
     }
 
     private func chooseSymbol() {
@@ -74,6 +78,7 @@ struct ContentView: View {
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = false
         if panel.runModal() == .OK {
+            renderedImage = nil
             symbolURL = panel.url
             statusMessage = "심볼 선택됨"
         }
@@ -85,6 +90,7 @@ struct ContentView: View {
             let symbolURL,
             let symbol = SymbolImageLoader.loadCGImage(from: symbolURL)
         else {
+            renderedImage = nil
             statusMessage = "로드 실패"
             return
         }
