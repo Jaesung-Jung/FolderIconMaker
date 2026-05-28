@@ -23,7 +23,14 @@ enum SymbolImageLoader {
 
         context.clear(CGRect(x: 0, y: 0, width: canvasSize, height: canvasSize))
         context.interpolationQuality = .high
-        context.draw(image, in: aspectFitRect(for: image, in: targetRect))
+        let rect = aspectFitRect(for: image, in: targetRect)
+        let drawingRect = CGRect(
+            x: rect.minX,
+            y: CGFloat(canvasSize) - rect.maxY,
+            width: rect.width,
+            height: rect.height
+        )
+        context.draw(image, in: drawingRect)
 
         var alpha = [UInt8](repeating: 0, count: canvasSize * canvasSize)
         for pixel in 0..<(canvasSize * canvasSize) {
