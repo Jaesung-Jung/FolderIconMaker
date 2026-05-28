@@ -1,0 +1,6 @@
+interface:
+  display_name: "gh-pr"
+  short_description: "Draft or create repository-compliant pull requests with live gh labels"
+  icon_small: "./assets/github.png"
+  icon_large: "./assets/github.png"
+  default_prompt: "Use $gh-pr to inspect the current repository's PR template and lint rules, draft or create a compliant PR with the gh CLI, query live labels, add the right labels, and link related issues when appropriate."

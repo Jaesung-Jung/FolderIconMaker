@@ -1,0 +1,6 @@
+interface:
+  display_name: "supabase"
+  short_description: "Supabase guidance for Database, Auth, Edge Functions, Realtime, Storage, CLI, MCP, and security."
+  icon_small: "./assets/supabase.png"
+  icon_large: "./assets/supabase.png"
+  default_prompt: "Use $supabase for any Supabase task; verify current docs and changelog, inspect project context, and apply Supabase-specific security guidance before answering."

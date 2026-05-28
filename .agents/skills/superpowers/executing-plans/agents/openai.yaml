@@ -1,0 +1,6 @@
+interface:
+  display_name: "executing-plans"
+  short_description: "Execute a written implementation plan with review checkpoints."
+  icon_small: "./assets/superpowers.png"
+  icon_large: "./assets/superpowers.png"
+  default_prompt: "Use $executing-plans to carry out a written implementation plan step by step with review checkpoints."

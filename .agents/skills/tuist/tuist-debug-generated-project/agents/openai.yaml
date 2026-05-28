@@ -1,0 +1,6 @@
+interface:
+  display_name: "tuist-debug-generated-project"
+  short_description: "Debug Tuist-generated project issues by reproducing generation, build, or runtime failures and triaging Tuist bugs versus project misconfiguration."
+  icon_small: "./assets/tuist.jpg"
+  icon_large: "./assets/tuist.jpg"
+  default_prompt: "Use $tuist-debug-generated-project when a Tuist-generated project has generation failures, build errors after generation, runtime crashes, unexpected project behavior, or needs reproduction against the latest Tuist release."

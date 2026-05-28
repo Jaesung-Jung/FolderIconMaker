@@ -1,0 +1,6 @@
+interface:
+  display_name: "dispatching-parallel-agents"
+  short_description: "Split independent work across parallel agents."
+  icon_small: "./assets/superpowers.png"
+  icon_large: "./assets/superpowers.png"
+  default_prompt: "Use $dispatching-parallel-agents when there are two or more independent tasks that can be investigated, reviewed, or implemented without shared state."

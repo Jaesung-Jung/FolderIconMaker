@@ -1,0 +1,6 @@
+interface:
+  display_name: "revise-agents-md"
+  short_description: "Capture session learnings for AGENTS.md"
+  icon_small: "./assets/codex.png"
+  icon_large: "./assets/codex.png"
+  default_prompt: "Use $revise-agents-md to capture reusable learnings from this session and propose concise AGENTS.md updates."

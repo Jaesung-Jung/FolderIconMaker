@@ -1,0 +1,6 @@
+interface:
+  display_name: "test-driven-development"
+  short_description: "Implement features and fixes with a test-first loop."
+  icon_small: "./assets/superpowers.png"
+  icon_large: "./assets/superpowers.png"
+  default_prompt: "Use $test-driven-development before implementation code to write a failing test, make it pass, and refactor safely."

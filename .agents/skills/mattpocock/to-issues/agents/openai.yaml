@@ -1,0 +1,6 @@
+interface:
+  display_name: "to-issues"
+  short_description: "Break plans into tracker issues"
+  icon_small: "./assets/matt.jpg"
+  icon_large: "./assets/matt.jpg"
+  default_prompt: "Use $to-issues to turn this plan into independently implementable issues."

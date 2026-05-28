@@ -1,0 +1,6 @@
+interface:
+  display_name: "swiftui-skill-update"
+  short_description: "Scan Apple SwiftUI documentation for deprecated APIs and update the SwiftUI skill with modern replacements."
+  icon_small: "./assets/swiftui.png"
+  icon_large: "./assets/swiftui.png"
+  default_prompt: "Use $swiftui-skill-update to refresh SwiftUI deprecated API guidance by scanning Apple documentation and updating the SwiftUI latest APIs reference."

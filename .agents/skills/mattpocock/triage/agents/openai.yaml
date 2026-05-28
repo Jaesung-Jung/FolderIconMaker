@@ -1,0 +1,6 @@
+interface:
+  display_name: "triage"
+  short_description: "Triage issues into actionable states"
+  icon_small: "./assets/matt.jpg"
+  icon_large: "./assets/matt.jpg"
+  default_prompt: "Use $triage to review and move issues through the project triage workflow."

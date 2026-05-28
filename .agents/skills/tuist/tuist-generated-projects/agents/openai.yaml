@@ -1,0 +1,6 @@
+interface:
+  display_name: "tuist-generated-projects"
+  short_description: "Guidance for day-to-day work in Tuist-generated Xcode workspaces, including generation, build/test commands, buildable folders, and troubleshooting."
+  icon_small: "./assets/tuist.jpg"
+  icon_large: "./assets/tuist.jpg"
+  default_prompt: "Use $tuist-generated-projects when working in a Tuist-generated Xcode workspace or when the task mentions tuist generate, xcodebuild build/test, buildable folders, target tags, or generated workspace troubleshooting."

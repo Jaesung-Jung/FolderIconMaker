@@ -1,0 +1,6 @@
+interface:
+  display_name: "handoff"
+  short_description: "Write a continuation handoff"
+  icon_small: "./assets/matt.jpg"
+  icon_large: "./assets/matt.jpg"
+  default_prompt: "Use $handoff to summarize this session so another agent can continue from here."

@@ -1,0 +1,6 @@
+interface:
+  display_name: "swift-concurrency"
+  short_description: "Diagnose Swift Concurrency issues, async/await refactors, Swift 6 migration, actors, Sendable, and data-race safety."
+  icon_small: "./assets/swift.png"
+  icon_large: "./assets/swift.png"
+  default_prompt: "Use $swift-concurrency to diagnose Swift Concurrency issues, isolation boundaries, Sendable warnings, task behavior, and Swift 6 migration guidance before answering."

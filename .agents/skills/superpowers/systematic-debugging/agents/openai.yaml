@@ -1,0 +1,6 @@
+interface:
+  display_name: "systematic-debugging"
+  short_description: "Diagnose bugs and test failures before proposing fixes."
+  icon_small: "./assets/superpowers.png"
+  icon_large: "./assets/superpowers.png"
+  default_prompt: "Use $systematic-debugging when facing a bug, failing test, or unexpected behavior; reproduce, narrow, instrument, fix, and regression-test it."

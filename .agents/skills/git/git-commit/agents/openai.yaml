@@ -1,0 +1,6 @@
+interface:
+  display_name: "git-commit"
+  short_description: "Generate clear Conventional Commit messages from staged or unstaged git changes."
+  icon_small: "./assets/git.png"
+  icon_large: "./assets/git.png"
+  default_prompt: "Use $git-commit to inspect git status and diffs, then generate a clear Conventional Commit message before committing."

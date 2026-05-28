@@ -1,0 +1,6 @@
+interface:
+  display_name: "verification-before-completion"
+  short_description: "Run verification before claiming work is complete or fixed."
+  icon_small: "./assets/superpowers.png"
+  icon_large: "./assets/superpowers.png"
+  default_prompt: "Use $verification-before-completion before saying work is complete, fixed, or passing; run the verification command and report the evidence."

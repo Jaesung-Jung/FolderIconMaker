@@ -1,0 +1,6 @@
+interface:
+  display_name: "using-superpowers"
+  short_description: "Select and invoke the right Superpowers skill before responding."
+  icon_small: "./assets/superpowers.png"
+  icon_large: "./assets/superpowers.png"
+  default_prompt: "Use $using-superpowers at the start of a conversation or task to identify and invoke the relevant Superpowers skills before responding."

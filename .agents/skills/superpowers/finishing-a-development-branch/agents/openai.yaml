@@ -1,0 +1,6 @@
+interface:
+  display_name: "finishing-a-development-branch"
+  short_description: "Decide how to merge, PR, or clean up completed branch work."
+  icon_small: "./assets/superpowers.png"
+  icon_large: "./assets/superpowers.png"
+  default_prompt: "Use $finishing-a-development-branch when implementation and verification are complete and the branch needs a merge, PR, cleanup, or handoff decision."

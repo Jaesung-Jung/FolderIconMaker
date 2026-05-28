@@ -1,0 +1,6 @@
+interface:
+  display_name: "swiftui"
+  short_description: "SwiftUI guidance for iOS and macOS, including state, view composition, performance, accessibility, navigation, and Instruments trace analysis."
+  icon_small: "./assets/swiftui.png"
+  icon_large: "./assets/swiftui.png"
+  default_prompt: "Use $swiftui for SwiftUI code review, implementation, refactoring, latest API checks, performance guidance, and Instruments trace workflows before answering."

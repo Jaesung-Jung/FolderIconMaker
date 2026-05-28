@@ -1,0 +1,6 @@
+interface:
+  display_name: "writing-plans"
+  short_description: "Turn approved requirements into a concrete implementation plan."
+  icon_small: "./assets/superpowers.png"
+  icon_large: "./assets/superpowers.png"
+  default_prompt: "Use $writing-plans when requirements are clear and the task needs a multi-step implementation plan before touching code."

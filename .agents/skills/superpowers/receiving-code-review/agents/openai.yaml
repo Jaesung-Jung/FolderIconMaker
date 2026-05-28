@@ -1,0 +1,6 @@
+interface:
+  display_name: "receiving-code-review"
+  short_description: "Evaluate code review feedback with technical rigor before applying it."
+  icon_small: "./assets/superpowers.png"
+  icon_large: "./assets/superpowers.png"
+  default_prompt: "Use $receiving-code-review to assess review feedback, verify the claims, and decide what to apply before changing code."

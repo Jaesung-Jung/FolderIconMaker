@@ -1,0 +1,6 @@
+interface:
+  display_name: "subagent-driven-development"
+  short_description: "Execute implementation plans through independent subagent tasks."
+  icon_small: "./assets/superpowers.png"
+  icon_large: "./assets/superpowers.png"
+  default_prompt: "Use $subagent-driven-development to execute an implementation plan by assigning independent tasks to subagents and integrating their results."

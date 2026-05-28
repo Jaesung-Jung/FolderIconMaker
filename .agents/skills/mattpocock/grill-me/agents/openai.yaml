@@ -1,0 +1,6 @@
+interface:
+  display_name: "grill-me"
+  short_description: "Interview until a plan is clear"
+  icon_small: "./assets/matt.jpg"
+  icon_large: "./assets/matt.jpg"
+  default_prompt: "Use $grill-me to question this plan until the decisions and tradeoffs are clear."

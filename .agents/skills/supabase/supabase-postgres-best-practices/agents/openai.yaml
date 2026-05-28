@@ -1,0 +1,6 @@
+interface:
+  display_name: "supabase-postgres-best-practices"
+  short_description: "Supabase Postgres performance, schema, query, RLS, and connection best practices."
+  icon_small: "./assets/supabase.png"
+  icon_large: "./assets/supabase.png"
+  default_prompt: "Use $supabase-postgres-best-practices when writing, reviewing, or optimizing Postgres SQL, schemas, indexes, RLS, connection pooling, or database performance."

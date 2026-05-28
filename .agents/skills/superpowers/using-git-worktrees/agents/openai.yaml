@@ -1,0 +1,6 @@
+interface:
+  display_name: "using-git-worktrees"
+  short_description: "Ensure isolated workspaces before feature work or plan execution."
+  icon_small: "./assets/superpowers.png"
+  icon_large: "./assets/superpowers.png"
+  default_prompt: "Use $using-git-worktrees before starting feature work or executing a plan to confirm or create an isolated workspace."

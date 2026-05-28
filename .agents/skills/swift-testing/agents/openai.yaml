@@ -1,0 +1,6 @@
+interface:
+  display_name: "swift-testing"
+  short_description: "Expert guidance for Swift Testing, including #expect/#require, traits, tags, parameterized tests, async tests, and XCTest migration."
+  icon_small: "./assets/swift-testing.png"
+  icon_large: "./assets/swift-testing.png"
+  default_prompt: "Use $swift-testing for Swift Testing guidance, modern test structure, assertions, traits, parallel-safe tests, async waiting, and XCTest migration before answering."

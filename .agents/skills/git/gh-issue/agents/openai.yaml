@@ -1,0 +1,6 @@
+interface:
+  display_name: "gh-issue"
+  short_description: "Draft or create repository-compliant issues with live gh labels"
+  icon_small: "./assets/github.png"
+  icon_large: "./assets/github.png"
+  default_prompt: "Use $gh-issue to inspect the current repository's issue templates and lint rules, draft or create a compliant GitHub issue with the gh CLI, query live labels, and add the right labels for the issue."

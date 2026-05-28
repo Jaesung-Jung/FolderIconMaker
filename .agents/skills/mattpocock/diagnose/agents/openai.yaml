@@ -1,0 +1,6 @@
+interface:
+  display_name: "diagnose"
+  short_description: "Disciplined bug diagnosis loop"
+  icon_small: "./assets/matt.jpg"
+  icon_large: "./assets/matt.jpg"
+  default_prompt: "Use $diagnose to reproduce, narrow, fix, and regression-test this bug."
