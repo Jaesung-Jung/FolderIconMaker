@@ -19,6 +19,8 @@
 		7E0000322C00000000000001 /* SymbolImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000332C00000000000001 /* SymbolImageLoaderTests.swift */; };
 		7E0000342C00000000000001 /* AlphaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000352C00000000000001 /* AlphaMask.swift */; };
 		7E0000362C00000000000001 /* SymbolImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000372C00000000000001 /* SymbolImageLoader.swift */; };
+		7E0000382C00000000000001 /* TahoeEmbossRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000392C00000000000001 /* TahoeEmbossRendererTests.swift */; };
+		7E00003A2C00000000000001 /* TahoeEmbossRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003B2C00000000000001 /* TahoeEmbossRenderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		7E0000332C00000000000001 /* SymbolImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolImageLoaderTests.swift; sourceTree = "<group>"; };
 		7E0000352C00000000000001 /* AlphaMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaMask.swift; sourceTree = "<group>"; };
 		7E0000372C00000000000001 /* SymbolImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolImageLoader.swift; sourceTree = "<group>"; };
+		7E0000392C00000000000001 /* TahoeEmbossRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TahoeEmbossRendererTests.swift; sourceTree = "<group>"; };
+		7E00003B2C00000000000001 /* TahoeEmbossRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TahoeEmbossRenderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 				7E00002D2C00000000000001 /* TestImages.swift */,
 				7E00002F2C00000000000001 /* PNGExporterTests.swift */,
 				7E0000332C00000000000001 /* SymbolImageLoaderTests.swift */,
+				7E0000392C00000000000001 /* TahoeEmbossRendererTests.swift */,
 			);
 			path = TahoeFolderComposerTests;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			children = (
 				7E0000352C00000000000001 /* AlphaMask.swift */,
 				7E0000372C00000000000001 /* SymbolImageLoader.swift */,
+				7E00003B2C00000000000001 /* TahoeEmbossRenderer.swift */,
 			);
 			path = Rendering;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 				7E0000302C00000000000001 /* PNGExporter.swift in Sources */,
 				7E0000342C00000000000001 /* AlphaMask.swift in Sources */,
 				7E0000362C00000000000001 /* SymbolImageLoader.swift in Sources */,
+				7E00003A2C00000000000001 /* TahoeEmbossRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +274,7 @@
 				7E00002C2C00000000000001 /* TestImages.swift in Sources */,
 				7E00002E2C00000000000001 /* PNGExporterTests.swift in Sources */,
 				7E0000322C00000000000001 /* SymbolImageLoaderTests.swift in Sources */,
+				7E0000382C00000000000001 /* TahoeEmbossRendererTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
