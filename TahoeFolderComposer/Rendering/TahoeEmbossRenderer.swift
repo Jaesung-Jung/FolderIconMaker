@@ -4,16 +4,18 @@ import Foundation
 struct TahoeEmbossRenderer {
     func render(base: CGImage, symbol: CGImage, settings: RenderSettings) -> CGImage {
         let size = settings.canvasSize
+        let glowRadius = 2
         var pixels = drawBase(base, size: size)
         let mask = SymbolImageLoader.alphaMask(from: symbol, canvasSize: size, targetRect: settings.symbolRect)
+        let bounds = expandedEffectBounds(settings: settings, canvasSize: size, glowRadius: glowRadius)
 
-        for y in 0..<size {
-            for x in 0..<size {
+        for y in bounds.minY..<bounds.maxY {
+            for x in bounds.minX..<bounds.maxX {
                 let index = (y * size + x) * 4
                 let alpha = CGFloat(mask.value(x: x, y: y)) / 255.0
                 let shadow = CGFloat(mask.value(x: x - Int(settings.shadowOffset.width), y: y - Int(settings.shadowOffset.height))) / 255.0
                 let highlight = max(0, CGFloat(mask.value(x: x + 1, y: y + 1)) / 255.0 - alpha)
-                let glow = max(0, neighborhoodMax(mask, x: x, y: y, radius: 2) - alpha)
+                let glow = max(0, neighborhoodMax(mask, x: x, y: y, radius: glowRadius) - alpha)
 
                 if alpha > 0 {
                     let factor = 1.0 - settings.mainDarken * alpha
@@ -44,18 +46,46 @@ struct TahoeEmbossRenderer {
 
     private func drawBase(_ image: CGImage, size: Int) -> [UInt8] {
         var pixels = [UInt8](repeating: 0, count: size * size * 4)
-        let context = CGContext(
-            data: &pixels,
-            width: size,
-            height: size,
-            bitsPerComponent: 8,
-            bytesPerRow: size * 4,
-            space: CGColorSpaceCreateDeviceRGB(),
-            bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
-        )!
-        context.interpolationQuality = .high
-        context.draw(image, in: CGRect(x: 0, y: 0, width: size, height: size))
+        pixels.withUnsafeMutableBytes { buffer in
+            let context = CGContext(
+                data: buffer.baseAddress,
+                width: size,
+                height: size,
+                bitsPerComponent: 8,
+                bytesPerRow: size * 4,
+                space: CGColorSpaceCreateDeviceRGB(),
+                bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
+            )!
+            context.interpolationQuality = .high
+            context.draw(image, in: CGRect(x: 0, y: 0, width: size, height: size))
+        }
         return pixels
+    }
+
+    private struct EffectBounds {
+        let minX: Int
+        let maxX: Int
+        let minY: Int
+        let maxY: Int
+    }
+
+    private func expandedEffectBounds(settings: RenderSettings, canvasSize: Int, glowRadius: Int) -> EffectBounds {
+        let shadowX = abs(Int(settings.shadowOffset.width))
+        let shadowY = abs(Int(settings.shadowOffset.height))
+        let xPadding = max(glowRadius, 1, shadowX)
+        let yPadding = max(glowRadius, 1, shadowY)
+        let rect = settings.symbolRect
+
+        return EffectBounds(
+            minX: clamped(Int(floor(rect.minX)) - xPadding, to: canvasSize),
+            maxX: clamped(Int(ceil(rect.maxX)) + xPadding, to: canvasSize),
+            minY: clamped(Int(floor(rect.minY)) - yPadding, to: canvasSize),
+            maxY: clamped(Int(ceil(rect.maxY)) + yPadding, to: canvasSize)
+        )
+    }
+
+    private func clamped(_ value: Int, to canvasSize: Int) -> Int {
+        min(canvasSize, max(0, value))
     }
 
     private func makeImage(from pixels: [UInt8], width: Int, height: Int) -> CGImage {
