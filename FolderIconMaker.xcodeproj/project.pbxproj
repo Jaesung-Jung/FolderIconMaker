@@ -3,31 +3,8 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
-
-/* Begin PBXBuildFile section */
-		7E0000012C00000000000001 /* FolderIconMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000022C00000000000001 /* FolderIconMakerApp.swift */; };
-		7E0000032C00000000000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000042C00000000000001 /* ContentView.swift */; };
-		7E0000052C00000000000001 /* composite-back-front.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0000062C00000000000001 /* composite-back-front.png */; };
-		7E0000072C00000000000001 /* composite-back-paper-front.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0000082C00000000000001 /* composite-back-paper-front.png */; };
-		7E0000282C00000000000001 /* FolderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000292C00000000000001 /* FolderStyle.swift */; };
-		7E00002A2C00000000000001 /* RenderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00002B2C00000000000001 /* RenderSettings.swift */; };
-		7E00002C2C00000000000001 /* TestImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00002D2C00000000000001 /* TestImages.swift */; };
-		7E00002E2C00000000000001 /* PNGExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00002F2C00000000000001 /* PNGExporterTests.swift */; };
-		7E0000302C00000000000001 /* PNGExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000312C00000000000001 /* PNGExporter.swift */; };
-		7E0000322C00000000000001 /* SymbolImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000332C00000000000001 /* SymbolImageLoaderTests.swift */; };
-		7E0000342C00000000000001 /* AlphaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000352C00000000000001 /* AlphaMask.swift */; };
-		7E0000362C00000000000001 /* SymbolImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000372C00000000000001 /* SymbolImageLoader.swift */; };
-		7E0000382C00000000000001 /* FolderIconMakerEmbossRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000392C00000000000001 /* FolderIconMakerEmbossRendererTests.swift */; };
-		7E00003A2C00000000000001 /* FolderIconMakerEmbossRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003B2C00000000000001 /* FolderIconMakerEmbossRenderer.swift */; };
-		7E00003C2C00000000000001 /* FinderIconApplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003D2C00000000000001 /* FinderIconApplier.swift */; };
-		7E00003E2C00000000000001 /* SystemFolderIconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003F2C00000000000001 /* SystemFolderIconProvider.swift */; };
-		7E0000402C00000000000001 /* ICNSExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000412C00000000000001 /* ICNSExporterTests.swift */; };
-		7E0000422C00000000000001 /* ICNSExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000432C00000000000001 /* ICNSExporter.swift */; };
-		7E0000442C00000000000001 /* PreviewStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000452C00000000000001 /* PreviewStateTests.swift */; };
-		7E0000462C00000000000001 /* PreviewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000472C00000000000001 /* PreviewState.swift */; };
-/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		7E0000092C00000000000001 /* PBXContainerItemProxy */ = {
@@ -40,29 +17,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7E0000022C00000000000001 /* FolderIconMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderIconMakerApp.swift; sourceTree = "<group>"; };
-		7E0000042C00000000000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7E0000062C00000000000001 /* composite-back-front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "composite-back-front.png"; sourceTree = "<group>"; };
-		7E0000082C00000000000001 /* composite-back-paper-front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "composite-back-paper-front.png"; sourceTree = "<group>"; };
 		7E00000C2C00000000000001 /* FolderIconMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FolderIconMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E00000D2C00000000000001 /* FolderIconMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolderIconMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E0000292C00000000000001 /* FolderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderStyle.swift; sourceTree = "<group>"; };
-		7E00002B2C00000000000001 /* RenderSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderSettings.swift; sourceTree = "<group>"; };
-		7E00002D2C00000000000001 /* TestImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImages.swift; sourceTree = "<group>"; };
-		7E00002F2C00000000000001 /* PNGExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNGExporterTests.swift; sourceTree = "<group>"; };
-		7E0000312C00000000000001 /* PNGExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNGExporter.swift; sourceTree = "<group>"; };
-		7E0000332C00000000000001 /* SymbolImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolImageLoaderTests.swift; sourceTree = "<group>"; };
-		7E0000352C00000000000001 /* AlphaMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaMask.swift; sourceTree = "<group>"; };
-		7E0000372C00000000000001 /* SymbolImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolImageLoader.swift; sourceTree = "<group>"; };
-		7E0000392C00000000000001 /* FolderIconMakerEmbossRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderIconMakerEmbossRendererTests.swift; sourceTree = "<group>"; };
-		7E00003B2C00000000000001 /* FolderIconMakerEmbossRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderIconMakerEmbossRenderer.swift; sourceTree = "<group>"; };
-		7E00003D2C00000000000001 /* FinderIconApplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderIconApplier.swift; sourceTree = "<group>"; };
-		7E00003F2C00000000000001 /* SystemFolderIconProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFolderIconProvider.swift; sourceTree = "<group>"; };
-		7E0000412C00000000000001 /* ICNSExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICNSExporterTests.swift; sourceTree = "<group>"; };
-		7E0000432C00000000000001 /* ICNSExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICNSExporter.swift; sourceTree = "<group>"; };
-		7E0000452C00000000000001 /* PreviewStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewStateTests.swift; sourceTree = "<group>"; };
-		7E0000472C00000000000001 /* PreviewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4B735CD72FCDC5B000245950 /* FolderIconMaker */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = FolderIconMaker; sourceTree = "<group>"; };
+		4B735CEC2FCDC5B400245950 /* FolderIconMakerTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = FolderIconMakerTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7E00000E2C00000000000001 /* Frameworks */ = {
@@ -85,37 +47,10 @@
 		7E0000102C00000000000001 = {
 			isa = PBXGroup;
 			children = (
-				7E0000112C00000000000001 /* FolderIconMaker */,
-				7E0000122C00000000000001 /* FolderIconMakerTests */,
+				4B735CD72FCDC5B000245950 /* FolderIconMaker */,
+				4B735CEC2FCDC5B400245950 /* FolderIconMakerTests */,
 				7E0000132C00000000000001 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		7E0000112C00000000000001 /* FolderIconMaker */ = {
-			isa = PBXGroup;
-			children = (
-				7E0000022C00000000000001 /* FolderIconMakerApp.swift */,
-				7E0000042C00000000000001 /* ContentView.swift */,
-				7E0000142C00000000000001 /* Resources */,
-				7E0000152C00000000000001 /* Models */,
-				7E0000162C00000000000001 /* Rendering */,
-				7E0000172C00000000000001 /* Exporting */,
-				7E0000182C00000000000001 /* SystemIntegration */,
-			);
-			path = FolderIconMaker;
-			sourceTree = "<group>";
-		};
-		7E0000122C00000000000001 /* FolderIconMakerTests */ = {
-			isa = PBXGroup;
-			children = (
-				7E00002D2C00000000000001 /* TestImages.swift */,
-				7E00002F2C00000000000001 /* PNGExporterTests.swift */,
-				7E0000412C00000000000001 /* ICNSExporterTests.swift */,
-				7E0000452C00000000000001 /* PreviewStateTests.swift */,
-				7E0000332C00000000000001 /* SymbolImageLoaderTests.swift */,
-				7E0000392C00000000000001 /* FolderIconMakerEmbossRendererTests.swift */,
-			);
-			path = FolderIconMakerTests;
 			sourceTree = "<group>";
 		};
 		7E0000132C00000000000001 /* Products */ = {
@@ -125,53 +60,6 @@
 				7E00000D2C00000000000001 /* FolderIconMakerTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		7E0000142C00000000000001 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7E0000062C00000000000001 /* composite-back-front.png */,
-				7E0000082C00000000000001 /* composite-back-paper-front.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		7E0000152C00000000000001 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				7E0000292C00000000000001 /* FolderStyle.swift */,
-				7E00002B2C00000000000001 /* RenderSettings.swift */,
-				7E0000472C00000000000001 /* PreviewState.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		7E0000162C00000000000001 /* Rendering */ = {
-			isa = PBXGroup;
-			children = (
-				7E0000352C00000000000001 /* AlphaMask.swift */,
-				7E0000372C00000000000001 /* SymbolImageLoader.swift */,
-				7E00003B2C00000000000001 /* FolderIconMakerEmbossRenderer.swift */,
-			);
-			path = Rendering;
-			sourceTree = "<group>";
-		};
-		7E0000172C00000000000001 /* Exporting */ = {
-			isa = PBXGroup;
-			children = (
-				7E0000312C00000000000001 /* PNGExporter.swift */,
-				7E0000432C00000000000001 /* ICNSExporter.swift */,
-			);
-			path = Exporting;
-			sourceTree = "<group>";
-		};
-		7E0000182C00000000000001 /* SystemIntegration */ = {
-			isa = PBXGroup;
-			children = (
-				7E00003D2C00000000000001 /* FinderIconApplier.swift */,
-				7E00003F2C00000000000001 /* SystemFolderIconProvider.swift */,
-			);
-			path = SystemIntegration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +76,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4B735CD72FCDC5B000245950 /* FolderIconMaker */,
 			);
 			name = FolderIconMaker;
 			productName = FolderIconMaker;
@@ -206,6 +97,9 @@
 			);
 			dependencies = (
 				7E0000202C00000000000001 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4B735CEC2FCDC5B400245950 /* FolderIconMakerTests */,
 			);
 			name = FolderIconMakerTests;
 			productName = FolderIconMakerTests;
@@ -255,8 +149,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E0000052C00000000000001 /* composite-back-front.png in Resources */,
-				7E0000072C00000000000001 /* composite-back-paper-front.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,18 +166,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E0000012C00000000000001 /* FolderIconMakerApp.swift in Sources */,
-				7E0000032C00000000000001 /* ContentView.swift in Sources */,
-				7E0000282C00000000000001 /* FolderStyle.swift in Sources */,
-				7E00002A2C00000000000001 /* RenderSettings.swift in Sources */,
-				7E0000462C00000000000001 /* PreviewState.swift in Sources */,
-				7E0000302C00000000000001 /* PNGExporter.swift in Sources */,
-				7E0000422C00000000000001 /* ICNSExporter.swift in Sources */,
-				7E0000342C00000000000001 /* AlphaMask.swift in Sources */,
-				7E0000362C00000000000001 /* SymbolImageLoader.swift in Sources */,
-				7E00003A2C00000000000001 /* FolderIconMakerEmbossRenderer.swift in Sources */,
-				7E00003C2C00000000000001 /* FinderIconApplier.swift in Sources */,
-				7E00003E2C00000000000001 /* SystemFolderIconProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,12 +173,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E00002C2C00000000000001 /* TestImages.swift in Sources */,
-				7E00002E2C00000000000001 /* PNGExporterTests.swift in Sources */,
-				7E0000402C00000000000001 /* ICNSExporterTests.swift in Sources */,
-				7E0000442C00000000000001 /* PreviewStateTests.swift in Sources */,
-				7E0000322C00000000000001 /* SymbolImageLoaderTests.swift in Sources */,
-				7E0000382C00000000000001 /* FolderIconMakerEmbossRendererTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +302,7 @@
 		7E0000242C00000000000001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -453,6 +328,7 @@
 		7E0000252C00000000000001 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
