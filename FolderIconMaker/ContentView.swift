@@ -7,7 +7,7 @@ struct ContentView: View {
   @State private var symbolURL: URL?
   @State private var preview = PreviewState()
   @State private var renderTask: Task<Void, Never>?
-  @State private var statusMessage = "심볼 파일을 선택하세요."
+  @State private var statusMessage = "Choose a symbol file."
 
   var body: some View {
     HStack(spacing: 0) {
@@ -32,7 +32,7 @@ struct ContentView: View {
               .frame(maxWidth: .infinity)
           }
 
-          Text(symbolURL?.lastPathComponent ?? "선택된 심볼 없음")
+          Text(symbolURL?.lastPathComponent ?? "No symbol selected")
             .font(.caption)
             .foregroundStyle(.secondary)
             .lineLimit(1)
@@ -123,22 +123,22 @@ struct ContentView: View {
     preview.showBase(base)
 
     guard let base else {
-      statusMessage = "폴더 이미지 로드 실패"
+      statusMessage = "Failed to load folder image."
       return
     }
 
     guard let symbolURL else {
-      statusMessage = "심볼 파일을 선택하세요."
+      statusMessage = "Choose a symbol file."
       return
     }
 
     guard let symbol = SymbolImageLoader.loadCGImage(from: symbolURL) else {
-      statusMessage = "심볼 로드 실패"
+      statusMessage = "Failed to load symbol."
       return
     }
 
     preview.beginRendering(baseImage: base)
-    statusMessage = "렌더링 중..."
+    statusMessage = "Rendering..."
     renderTask = Task { @MainActor in
       await Task.yield()
       if Task.isCancelled { return }
@@ -149,7 +149,7 @@ struct ContentView: View {
       if Task.isCancelled { return }
 
       preview.showRendered(image)
-      statusMessage = "렌더 완료"
+      statusMessage = "Render complete."
     }
   }
 
@@ -161,9 +161,9 @@ struct ContentView: View {
     if panel.runModal() == .OK, let url = panel.url {
       do {
         try PNGExporter.write(image, to: url)
-        statusMessage = "저장 완료"
+        statusMessage = "PNG saved."
       } catch {
-        statusMessage = "저장 실패"
+        statusMessage = "Failed to save PNG."
       }
     }
   }
@@ -176,9 +176,9 @@ struct ContentView: View {
     if panel.runModal() == .OK, let url = panel.url {
       do {
         try ICNSExporter.write(image, to: url)
-        statusMessage = "ICNS 저장 완료"
+        statusMessage = "ICNS saved."
       } catch {
-        statusMessage = "ICNS 저장 실패"
+        statusMessage = "Failed to save ICNS."
       }
     }
   }
@@ -190,7 +190,7 @@ struct ContentView: View {
     panel.canChooseDirectories = true
     panel.allowsMultipleSelection = false
     if panel.runModal() == .OK, let url = panel.url {
-      statusMessage = FinderIconApplier.apply(image, to: url) ? "적용 완료" : "적용 실패"
+      statusMessage = FinderIconApplier.apply(image, to: url) ? "Applied to folder." : "Failed to apply."
     }
   }
 
