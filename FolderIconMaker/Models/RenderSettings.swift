@@ -11,7 +11,7 @@ struct RenderSettings: Equatable {
 
   static let `default` = RenderSettings(
     canvasSize: 1024,
-    symbolRect: CGRect(x: 352, y: 415, width: 320, height: 320),
+    symbolRect: CGRect(x: 312, y: 380, width: 400, height: 400),
     mainDarken: 0.16,
     shadowOpacity: 0.30,
     shadowOffset: CGSize(width: 2, height: 3),

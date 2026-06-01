@@ -23,7 +23,7 @@ enum SymbolImageLoader {
 
     context.clear(CGRect(x: 0, y: 0, width: canvasSize, height: canvasSize))
     context.interpolationQuality = .high
-    let rect = aspectFitRect(for: image, in: targetRect)
+    let rect = heightLimitedRect(for: image, in: targetRect)
     let drawingRect = CGRect(
       x: rect.minX,
       y: CGFloat(canvasSize) - rect.maxY,
@@ -39,16 +39,9 @@ enum SymbolImageLoader {
     return AlphaMask(width: canvasSize, height: canvasSize, values: alpha)
   }
 
-  private static func aspectFitRect(for image: CGImage, in rect: CGRect) -> CGRect {
+  private static func heightLimitedRect(for image: CGImage, in rect: CGRect) -> CGRect {
     let imageRatio = CGFloat(image.width) / CGFloat(image.height)
-    let rectRatio = rect.width / rect.height
-
-    if imageRatio > rectRatio {
-      let height = rect.width / imageRatio
-      return CGRect(x: rect.minX, y: rect.midY - height / 2, width: rect.width, height: height)
-    } else {
-      let width = rect.height * imageRatio
-      return CGRect(x: rect.midX - width / 2, y: rect.minY, width: width, height: rect.height)
-    }
+    let width = rect.height * imageRatio
+    return CGRect(x: rect.midX - width / 2, y: rect.minY, width: width, height: rect.height)
   }
 }
