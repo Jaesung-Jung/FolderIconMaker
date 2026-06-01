@@ -1,7 +1,7 @@
 import Foundation
 
 enum FolderStyle: String, CaseIterable, Identifiable {
-  case empty = "Empty"
+  case empty = "OS Empty"
   case paper = "Paper"
 
   var id: String { rawValue }

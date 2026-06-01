@@ -2,7 +2,7 @@ import AppKit
 import SwiftUI
 
 struct ContentView: View {
-  @State private var folderStyle: FolderStyle = .paper
+  @State private var folderStyle: FolderStyle = .empty
   @State private var symbolURL: URL?
   @State private var renderedImage: CGImage?
   @State private var statusMessage = "심볼 파일을 선택하세요."
@@ -130,6 +130,11 @@ struct ContentView: View {
   }
 
   private func loadBaseImage() -> CGImage? {
+    if folderStyle == .empty {
+      return SystemFolderIconProvider().emptyFolderIcon(
+        canvasSize: RenderSettings.default.canvasSize)
+    }
+
     guard
       let url = Bundle.main.url(forResource: folderStyle.resourceName, withExtension: "png"),
       let image = NSImage(contentsOf: url)

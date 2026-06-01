@@ -22,6 +22,7 @@
 		7E0000382C00000000000001 /* TahoeEmbossRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000392C00000000000001 /* TahoeEmbossRendererTests.swift */; };
 		7E00003A2C00000000000001 /* TahoeEmbossRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003B2C00000000000001 /* TahoeEmbossRenderer.swift */; };
 		7E00003C2C00000000000001 /* FinderIconApplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003D2C00000000000001 /* FinderIconApplier.swift */; };
+		7E00003E2C00000000000001 /* SystemFolderIconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003F2C00000000000001 /* SystemFolderIconProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		7E0000392C00000000000001 /* TahoeEmbossRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TahoeEmbossRendererTests.swift; sourceTree = "<group>"; };
 		7E00003B2C00000000000001 /* TahoeEmbossRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TahoeEmbossRenderer.swift; sourceTree = "<group>"; };
 		7E00003D2C00000000000001 /* FinderIconApplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderIconApplier.swift; sourceTree = "<group>"; };
+		7E00003F2C00000000000001 /* SystemFolderIconProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFolderIconProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				7E00003D2C00000000000001 /* FinderIconApplier.swift */,
+				7E00003F2C00000000000001 /* SystemFolderIconProvider.swift */,
 			);
 			path = SystemIntegration;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				7E0000362C00000000000001 /* SymbolImageLoader.swift in Sources */,
 				7E00003A2C00000000000001 /* TahoeEmbossRenderer.swift in Sources */,
 				7E00003C2C00000000000001 /* FinderIconApplier.swift in Sources */,
+				7E00003E2C00000000000001 /* SystemFolderIconProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
