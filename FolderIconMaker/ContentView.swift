@@ -68,6 +68,7 @@ struct ContentView: View {
       }
       .padding(20)
       .frame(width: 260)
+      .frame(maxHeight: .infinity)
 
       ZStack {
         Color(nsColor: .windowBackgroundColor)
@@ -91,9 +92,17 @@ struct ContentView: View {
             .controlSize(.large)
         }
       }
-      .frame(width: 640, height: 620)
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .layoutPriority(1)
     }
-    .frame(width: 900, height: 620)
+    .frame(
+      minWidth: 760,
+      idealWidth: 900,
+      maxWidth: .infinity,
+      minHeight: 520,
+      idealHeight: 620,
+      maxHeight: .infinity
+    )
     .onAppear {
       refreshPreview()
     }
