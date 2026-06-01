@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct TahoeFolderComposerApp: App {
+struct FolderIconMakerApp: App {
   var body: some Scene {
     WindowGroup {
       ContentView()

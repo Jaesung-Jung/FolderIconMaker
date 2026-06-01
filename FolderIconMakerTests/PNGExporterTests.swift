@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-@testable import TahoeFolderComposer
+@testable import FolderIconMaker
 
 private let pngSignature: [UInt8] = [137, 80, 78, 71, 13, 10, 26, 10]
 

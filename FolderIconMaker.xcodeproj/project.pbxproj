@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E0000012C00000000000001 /* TahoeFolderComposerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000022C00000000000001 /* TahoeFolderComposerApp.swift */; };
+		7E0000012C00000000000001 /* FolderIconMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000022C00000000000001 /* FolderIconMakerApp.swift */; };
 		7E0000032C00000000000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000042C00000000000001 /* ContentView.swift */; };
 		7E0000052C00000000000001 /* composite-back-front.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0000062C00000000000001 /* composite-back-front.png */; };
 		7E0000072C00000000000001 /* composite-back-paper-front.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0000082C00000000000001 /* composite-back-paper-front.png */; };
@@ -19,8 +19,8 @@
 		7E0000322C00000000000001 /* SymbolImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000332C00000000000001 /* SymbolImageLoaderTests.swift */; };
 		7E0000342C00000000000001 /* AlphaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000352C00000000000001 /* AlphaMask.swift */; };
 		7E0000362C00000000000001 /* SymbolImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000372C00000000000001 /* SymbolImageLoader.swift */; };
-		7E0000382C00000000000001 /* TahoeEmbossRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000392C00000000000001 /* TahoeEmbossRendererTests.swift */; };
-		7E00003A2C00000000000001 /* TahoeEmbossRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003B2C00000000000001 /* TahoeEmbossRenderer.swift */; };
+		7E0000382C00000000000001 /* FolderIconMakerEmbossRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000392C00000000000001 /* FolderIconMakerEmbossRendererTests.swift */; };
+		7E00003A2C00000000000001 /* FolderIconMakerEmbossRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003B2C00000000000001 /* FolderIconMakerEmbossRenderer.swift */; };
 		7E00003C2C00000000000001 /* FinderIconApplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003D2C00000000000001 /* FinderIconApplier.swift */; };
 		7E00003E2C00000000000001 /* SystemFolderIconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003F2C00000000000001 /* SystemFolderIconProvider.swift */; };
 /* End PBXBuildFile section */
@@ -31,17 +31,17 @@
 			containerPortal = 7E00000A2C00000000000001 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7E00000B2C00000000000001;
-			remoteInfo = TahoeFolderComposer;
+			remoteInfo = FolderIconMaker;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7E0000022C00000000000001 /* TahoeFolderComposerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TahoeFolderComposerApp.swift; sourceTree = "<group>"; };
+		7E0000022C00000000000001 /* FolderIconMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderIconMakerApp.swift; sourceTree = "<group>"; };
 		7E0000042C00000000000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E0000062C00000000000001 /* composite-back-front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "composite-back-front.png"; sourceTree = "<group>"; };
 		7E0000082C00000000000001 /* composite-back-paper-front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "composite-back-paper-front.png"; sourceTree = "<group>"; };
-		7E00000C2C00000000000001 /* TahoeFolderComposer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TahoeFolderComposer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E00000D2C00000000000001 /* TahoeFolderComposerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TahoeFolderComposerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E00000C2C00000000000001 /* FolderIconMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FolderIconMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E00000D2C00000000000001 /* FolderIconMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolderIconMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E0000292C00000000000001 /* FolderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderStyle.swift; sourceTree = "<group>"; };
 		7E00002B2C00000000000001 /* RenderSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderSettings.swift; sourceTree = "<group>"; };
 		7E00002D2C00000000000001 /* TestImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImages.swift; sourceTree = "<group>"; };
@@ -50,8 +50,8 @@
 		7E0000332C00000000000001 /* SymbolImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolImageLoaderTests.swift; sourceTree = "<group>"; };
 		7E0000352C00000000000001 /* AlphaMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaMask.swift; sourceTree = "<group>"; };
 		7E0000372C00000000000001 /* SymbolImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolImageLoader.swift; sourceTree = "<group>"; };
-		7E0000392C00000000000001 /* TahoeEmbossRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TahoeEmbossRendererTests.swift; sourceTree = "<group>"; };
-		7E00003B2C00000000000001 /* TahoeEmbossRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TahoeEmbossRenderer.swift; sourceTree = "<group>"; };
+		7E0000392C00000000000001 /* FolderIconMakerEmbossRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderIconMakerEmbossRendererTests.swift; sourceTree = "<group>"; };
+		7E00003B2C00000000000001 /* FolderIconMakerEmbossRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderIconMakerEmbossRenderer.swift; sourceTree = "<group>"; };
 		7E00003D2C00000000000001 /* FinderIconApplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderIconApplier.swift; sourceTree = "<group>"; };
 		7E00003F2C00000000000001 /* SystemFolderIconProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFolderIconProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,16 +77,16 @@
 		7E0000102C00000000000001 = {
 			isa = PBXGroup;
 			children = (
-				7E0000112C00000000000001 /* TahoeFolderComposer */,
-				7E0000122C00000000000001 /* TahoeFolderComposerTests */,
+				7E0000112C00000000000001 /* FolderIconMaker */,
+				7E0000122C00000000000001 /* FolderIconMakerTests */,
 				7E0000132C00000000000001 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7E0000112C00000000000001 /* TahoeFolderComposer */ = {
+		7E0000112C00000000000001 /* FolderIconMaker */ = {
 			isa = PBXGroup;
 			children = (
-				7E0000022C00000000000001 /* TahoeFolderComposerApp.swift */,
+				7E0000022C00000000000001 /* FolderIconMakerApp.swift */,
 				7E0000042C00000000000001 /* ContentView.swift */,
 				7E0000142C00000000000001 /* Resources */,
 				7E0000152C00000000000001 /* Models */,
@@ -94,25 +94,25 @@
 				7E0000172C00000000000001 /* Exporting */,
 				7E0000182C00000000000001 /* SystemIntegration */,
 			);
-			path = TahoeFolderComposer;
+			path = FolderIconMaker;
 			sourceTree = "<group>";
 		};
-		7E0000122C00000000000001 /* TahoeFolderComposerTests */ = {
+		7E0000122C00000000000001 /* FolderIconMakerTests */ = {
 			isa = PBXGroup;
 			children = (
 				7E00002D2C00000000000001 /* TestImages.swift */,
 				7E00002F2C00000000000001 /* PNGExporterTests.swift */,
 				7E0000332C00000000000001 /* SymbolImageLoaderTests.swift */,
-				7E0000392C00000000000001 /* TahoeEmbossRendererTests.swift */,
+				7E0000392C00000000000001 /* FolderIconMakerEmbossRendererTests.swift */,
 			);
-			path = TahoeFolderComposerTests;
+			path = FolderIconMakerTests;
 			sourceTree = "<group>";
 		};
 		7E0000132C00000000000001 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7E00000C2C00000000000001 /* TahoeFolderComposer.app */,
-				7E00000D2C00000000000001 /* TahoeFolderComposerTests.xctest */,
+				7E00000C2C00000000000001 /* FolderIconMaker.app */,
+				7E00000D2C00000000000001 /* FolderIconMakerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 			children = (
 				7E0000352C00000000000001 /* AlphaMask.swift */,
 				7E0000372C00000000000001 /* SymbolImageLoader.swift */,
-				7E00003B2C00000000000001 /* TahoeEmbossRenderer.swift */,
+				7E00003B2C00000000000001 /* FolderIconMakerEmbossRenderer.swift */,
 			);
 			path = Rendering;
 			sourceTree = "<group>";
@@ -165,9 +165,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7E00000B2C00000000000001 /* TahoeFolderComposer */ = {
+		7E00000B2C00000000000001 /* FolderIconMaker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E0000192C00000000000001 /* Build configuration list for PBXNativeTarget "TahoeFolderComposer" */;
+			buildConfigurationList = 7E0000192C00000000000001 /* Build configuration list for PBXNativeTarget "FolderIconMaker" */;
 			buildPhases = (
 				7E00001A2C00000000000001 /* Sources */,
 				7E00000E2C00000000000001 /* Frameworks */,
@@ -177,14 +177,14 @@
 			);
 			dependencies = (
 			);
-			name = TahoeFolderComposer;
-			productName = TahoeFolderComposer;
-			productReference = 7E00000C2C00000000000001 /* TahoeFolderComposer.app */;
+			name = FolderIconMaker;
+			productName = FolderIconMaker;
+			productReference = 7E00000C2C00000000000001 /* FolderIconMaker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7E00001C2C00000000000001 /* TahoeFolderComposerTests */ = {
+		7E00001C2C00000000000001 /* FolderIconMakerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E00001D2C00000000000001 /* Build configuration list for PBXNativeTarget "TahoeFolderComposerTests" */;
+			buildConfigurationList = 7E00001D2C00000000000001 /* Build configuration list for PBXNativeTarget "FolderIconMakerTests" */;
 			buildPhases = (
 				7E00001E2C00000000000001 /* Sources */,
 				7E00000F2C00000000000001 /* Frameworks */,
@@ -195,9 +195,9 @@
 			dependencies = (
 				7E0000202C00000000000001 /* PBXTargetDependency */,
 			);
-			name = TahoeFolderComposerTests;
-			productName = TahoeFolderComposerTests;
-			productReference = 7E00000D2C00000000000001 /* TahoeFolderComposerTests.xctest */;
+			name = FolderIconMakerTests;
+			productName = FolderIconMakerTests;
+			productReference = 7E00000D2C00000000000001 /* FolderIconMakerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7E0000212C00000000000001 /* Build configuration list for PBXProject "TahoeFolderComposer" */;
+			buildConfigurationList = 7E0000212C00000000000001 /* Build configuration list for PBXProject "FolderIconMaker" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -232,8 +232,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7E00000B2C00000000000001 /* TahoeFolderComposer */,
-				7E00001C2C00000000000001 /* TahoeFolderComposerTests */,
+				7E00000B2C00000000000001 /* FolderIconMaker */,
+				7E00001C2C00000000000001 /* FolderIconMakerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,14 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E0000012C00000000000001 /* TahoeFolderComposerApp.swift in Sources */,
+				7E0000012C00000000000001 /* FolderIconMakerApp.swift in Sources */,
 				7E0000032C00000000000001 /* ContentView.swift in Sources */,
 				7E0000282C00000000000001 /* FolderStyle.swift in Sources */,
 				7E00002A2C00000000000001 /* RenderSettings.swift in Sources */,
 				7E0000302C00000000000001 /* PNGExporter.swift in Sources */,
 				7E0000342C00000000000001 /* AlphaMask.swift in Sources */,
 				7E0000362C00000000000001 /* SymbolImageLoader.swift in Sources */,
-				7E00003A2C00000000000001 /* TahoeEmbossRenderer.swift in Sources */,
+				7E00003A2C00000000000001 /* FolderIconMakerEmbossRenderer.swift in Sources */,
 				7E00003C2C00000000000001 /* FinderIconApplier.swift in Sources */,
 				7E00003E2C00000000000001 /* SystemFolderIconProvider.swift in Sources */,
 			);
@@ -282,7 +282,7 @@
 				7E00002C2C00000000000001 /* TestImages.swift in Sources */,
 				7E00002E2C00000000000001 /* PNGExporterTests.swift in Sources */,
 				7E0000322C00000000000001 /* SymbolImageLoaderTests.swift in Sources */,
-				7E0000382C00000000000001 /* TahoeEmbossRendererTests.swift in Sources */,
+				7E0000382C00000000000001 /* FolderIconMakerEmbossRendererTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +291,7 @@
 /* Begin PBXTargetDependency section */
 		7E0000202C00000000000001 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7E00000B2C00000000000001 /* TahoeFolderComposer */;
+			target = 7E00000B2C00000000000001 /* FolderIconMaker */;
 			targetProxy = 7E0000092C00000000000001 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -413,8 +413,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -423,8 +424,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				PRODUCT_BUNDLE_IDENTIFIER = local.TahoeFolderComposer;
-				PRODUCT_NAME = TahoeFolderComposer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.js.fim;
+				PRODUCT_NAME = FolderIconMaker;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -436,8 +438,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -446,8 +449,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				PRODUCT_BUNDLE_IDENTIFIER = local.TahoeFolderComposer;
-				PRODUCT_NAME = TahoeFolderComposer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.js.fim;
+				PRODUCT_NAME = FolderIconMaker;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -469,12 +473,12 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				PRODUCT_BUNDLE_IDENTIFIER = local.TahoeFolderComposerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = local.FolderIconMakerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 6.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TahoeFolderComposer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TahoeFolderComposer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FolderIconMaker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FolderIconMaker";
 			};
 			name = Debug;
 		};
@@ -492,19 +496,19 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				PRODUCT_BUNDLE_IDENTIFIER = local.TahoeFolderComposerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = local.FolderIconMakerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 6.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TahoeFolderComposer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TahoeFolderComposer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FolderIconMaker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FolderIconMaker";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7E0000192C00000000000001 /* Build configuration list for PBXNativeTarget "TahoeFolderComposer" */ = {
+		7E0000192C00000000000001 /* Build configuration list for PBXNativeTarget "FolderIconMaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7E0000242C00000000000001 /* Debug */,
@@ -513,7 +517,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		7E00001D2C00000000000001 /* Build configuration list for PBXNativeTarget "TahoeFolderComposerTests" */ = {
+		7E00001D2C00000000000001 /* Build configuration list for PBXNativeTarget "FolderIconMakerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7E0000262C00000000000001 /* Debug */,
@@ -522,7 +526,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		7E0000212C00000000000001 /* Build configuration list for PBXProject "TahoeFolderComposer" */ = {
+		7E0000212C00000000000001 /* Build configuration list for PBXProject "FolderIconMaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7E0000222C00000000000001 /* Debug */,

@@ -4,15 +4,15 @@ import Darwin
 import Foundation
 import XCTest
 
-@testable import TahoeFolderComposer
+@testable import FolderIconMaker
 
-final class TahoeEmbossRendererTests: XCTestCase {
+final class FolderIconMakerEmbossRendererTests: XCTestCase {
   private let pngSignature = [UInt8](arrayLiteral: 0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A)
 
   func testRenderProducesCanvasSizedImage() throws {
     let base = try TestImages.solidCGImage(width: 1024, height: 1024, rgba: [105, 184, 228, 255])
     let symbol = try TestImages.solidCGImage(width: 32, height: 32, rgba: [0, 0, 0, 255])
-    let result = TahoeEmbossRenderer().render(base: base, symbol: symbol, settings: .default)
+    let result = FolderIconMakerEmbossRenderer().render(base: base, symbol: symbol, settings: .default)
 
     XCTAssertEqual(result.width, 1024)
     XCTAssertEqual(result.height, 1024)
@@ -32,7 +32,7 @@ final class TahoeEmbossRendererTests: XCTestCase {
       glowOpacity: 0.16
     )
 
-    let result = TahoeEmbossRenderer().render(base: base, symbol: symbol, settings: settings)
+    let result = FolderIconMakerEmbossRenderer().render(base: base, symbol: symbol, settings: settings)
 
     XCTAssertNotEqual(try pixel(in: result, x: 3, y: 3), baseColor)
     XCTAssertEqual(try pixel(in: result, x: 0, y: 0), baseColor)
@@ -42,7 +42,7 @@ final class TahoeEmbossRendererTests: XCTestCase {
     let base = try TestImages.solidCGImage(width: 1024, height: 1024, rgba: [105, 184, 228, 255])
     let symbol = try TestImages.solidCGImage(width: 32, height: 32, rgba: [0, 0, 0, 255])
     let settings = RenderSettings.default
-    let result = TahoeEmbossRenderer().render(base: base, symbol: symbol, settings: settings)
+    let result = FolderIconMakerEmbossRenderer().render(base: base, symbol: symbol, settings: settings)
     let expected = try iconServicesEmbossedImage(base: base, symbol: symbol, settings: settings)
 
     XCTAssertLessThan(try meanAbsoluteRGBDifference(result, expected), 0.5)
@@ -60,7 +60,7 @@ final class TahoeEmbossRendererTests: XCTestCase {
       highlightOpacity: 0.24,
       glowOpacity: 0.16
     )
-    let result = TahoeEmbossRenderer().render(base: base, symbol: symbol, settings: settings)
+    let result = FolderIconMakerEmbossRenderer().render(base: base, symbol: symbol, settings: settings)
     let pngData = try XCTUnwrap(PNGExporter.pngData(from: result))
 
     XCTAssertEqual(Array(pngData.prefix(pngSignature.count)), pngSignature)
@@ -71,7 +71,7 @@ final class TahoeEmbossRendererTests: XCTestCase {
     let symbol = try TestImages.solidCGImage(width: 32, height: 32, rgba: [0, 0, 0, 255])
     let start = Date()
 
-    _ = TahoeEmbossRenderer().render(base: base, symbol: symbol, settings: .default)
+    _ = FolderIconMakerEmbossRenderer().render(base: base, symbol: symbol, settings: .default)
 
     XCTAssertLessThan(Date().timeIntervalSince(start), 3.0)
   }

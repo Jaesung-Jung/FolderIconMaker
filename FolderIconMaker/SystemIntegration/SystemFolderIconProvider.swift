@@ -5,7 +5,7 @@ import Foundation
 struct SystemFolderIconProvider {
   func emptyFolderIcon(canvasSize: Int) -> CGImage {
     let folderURL = FileManager.default.temporaryDirectory
-      .appendingPathComponent("TahoeFolderComposerEmptyFolder", isDirectory: true)
+      .appendingPathComponent("FolderIconMakerEmptyFolder", isDirectory: true)
     try? FileManager.default.createDirectory(at: folderURL, withIntermediateDirectories: true)
     NSWorkspace.shared.noteFileSystemChanged(folderURL.path)
 

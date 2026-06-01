@@ -3,7 +3,7 @@ import CoreImage
 import Darwin
 import Foundation
 
-struct TahoeEmbossRenderer {
+struct FolderIconMakerEmbossRenderer {
   func render(base: CGImage, symbol: CGImage, settings: RenderSettings) -> CGImage {
     let baseImage = drawBase(base, size: settings.canvasSize)
     let symbolInput = drawSymbolInput(symbol, settings: settings)

@@ -1,7 +1,7 @@
 import CoreGraphics
 import XCTest
 
-@testable import TahoeFolderComposer
+@testable import FolderIconMaker
 
 final class SymbolImageLoaderTests: XCTestCase {
   func testAlphaMaskFitsImageIntoTargetRect() throws {

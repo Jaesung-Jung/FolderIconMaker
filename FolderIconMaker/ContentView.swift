@@ -99,7 +99,7 @@ struct ContentView: View {
       return
     }
 
-    renderedImage = TahoeEmbossRenderer().render(base: base, symbol: symbol, settings: .default)
+    renderedImage = FolderIconMakerEmbossRenderer().render(base: base, symbol: symbol, settings: .default)
     statusMessage = "렌더 완료"
   }
 
@@ -107,7 +107,7 @@ struct ContentView: View {
     guard let renderedImage else { return }
     let panel = NSSavePanel()
     panel.allowedContentTypes = [.png]
-    panel.nameFieldStringValue = "TahoeFolderIcon.png"
+    panel.nameFieldStringValue = "FolderIconMaker.png"
     if panel.runModal() == .OK, let url = panel.url {
       do {
         try PNGExporter.write(renderedImage, to: url)

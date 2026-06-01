@@ -1,4 +1,4 @@
-# Tahoe Folder Icon Customization App - Handoff
+# FolderIconMaker App - Handoff
 
 작성일: 2026-05-28  
 환경: macOS 26.5 Tahoe, Build 25F71  
@@ -378,7 +378,7 @@ tahoe_symbol_overlay.py
 앱 이름 예:
 
 ```text
-TahoeFolderComposer
+FolderIconMaker
 ```
 
 Swift Package 또는 Xcode macOS app.
@@ -386,14 +386,14 @@ Swift Package 또는 Xcode macOS app.
 추천 모듈:
 
 ```text
-TahoeFolderComposer/
+FolderIconMaker/
   App/
-    TahoeFolderComposerApp.swift
+    FolderIconMakerApp.swift
     ContentView.swift
   Rendering/
     FolderBaseRenderer.swift
     SymbolMaskRenderer.swift
-    TahoeEmbossRenderer.swift
+    FolderIconMakerEmbossRenderer.swift
     IconExporter.swift
   System/
     SystemFolderIconProvider.swift
