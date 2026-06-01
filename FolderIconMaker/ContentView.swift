@@ -1,5 +1,6 @@
 import AppKit
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct ContentView: View {
   @State private var folderStyle: FolderStyle = .empty
@@ -33,6 +34,11 @@ struct ContentView: View {
 
         Button("Save PNG") {
           savePNG()
+        }
+        .disabled(renderedImage == nil)
+
+        Button("Save ICNS") {
+          saveICNS()
         }
         .disabled(renderedImage == nil)
 
@@ -114,6 +120,21 @@ struct ContentView: View {
         statusMessage = "저장 완료"
       } catch {
         statusMessage = "저장 실패"
+      }
+    }
+  }
+
+  private func saveICNS() {
+    guard let renderedImage else { return }
+    let panel = NSSavePanel()
+    panel.allowedContentTypes = [UTType(filenameExtension: "icns")!]
+    panel.nameFieldStringValue = "FolderIconMaker.icns"
+    if panel.runModal() == .OK, let url = panel.url {
+      do {
+        try ICNSExporter.write(renderedImage, to: url)
+        statusMessage = "ICNS 저장 완료"
+      } catch {
+        statusMessage = "ICNS 저장 실패"
       }
     }
   }
