@@ -25,6 +25,8 @@
 		7E00003E2C00000000000001 /* SystemFolderIconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00003F2C00000000000001 /* SystemFolderIconProvider.swift */; };
 		7E0000402C00000000000001 /* ICNSExporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000412C00000000000001 /* ICNSExporterTests.swift */; };
 		7E0000422C00000000000001 /* ICNSExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000432C00000000000001 /* ICNSExporter.swift */; };
+		7E0000442C00000000000001 /* PreviewStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000452C00000000000001 /* PreviewStateTests.swift */; };
+		7E0000462C00000000000001 /* PreviewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0000472C00000000000001 /* PreviewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		7E00003F2C00000000000001 /* SystemFolderIconProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemFolderIconProvider.swift; sourceTree = "<group>"; };
 		7E0000412C00000000000001 /* ICNSExporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICNSExporterTests.swift; sourceTree = "<group>"; };
 		7E0000432C00000000000001 /* ICNSExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICNSExporter.swift; sourceTree = "<group>"; };
+		7E0000452C00000000000001 /* PreviewStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewStateTests.swift; sourceTree = "<group>"; };
+		7E0000472C00000000000001 /* PreviewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 				7E00002D2C00000000000001 /* TestImages.swift */,
 				7E00002F2C00000000000001 /* PNGExporterTests.swift */,
 				7E0000412C00000000000001 /* ICNSExporterTests.swift */,
+				7E0000452C00000000000001 /* PreviewStateTests.swift */,
 				7E0000332C00000000000001 /* SymbolImageLoaderTests.swift */,
 				7E0000392C00000000000001 /* FolderIconMakerEmbossRendererTests.swift */,
 			);
@@ -136,6 +141,7 @@
 			children = (
 				7E0000292C00000000000001 /* FolderStyle.swift */,
 				7E00002B2C00000000000001 /* RenderSettings.swift */,
+				7E0000472C00000000000001 /* PreviewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 				7E0000032C00000000000001 /* ContentView.swift in Sources */,
 				7E0000282C00000000000001 /* FolderStyle.swift in Sources */,
 				7E00002A2C00000000000001 /* RenderSettings.swift in Sources */,
+				7E0000462C00000000000001 /* PreviewState.swift in Sources */,
 				7E0000302C00000000000001 /* PNGExporter.swift in Sources */,
 				7E0000422C00000000000001 /* ICNSExporter.swift in Sources */,
 				7E0000342C00000000000001 /* AlphaMask.swift in Sources */,
@@ -289,6 +296,7 @@
 				7E00002C2C00000000000001 /* TestImages.swift in Sources */,
 				7E00002E2C00000000000001 /* PNGExporterTests.swift in Sources */,
 				7E0000402C00000000000001 /* ICNSExporterTests.swift in Sources */,
+				7E0000442C00000000000001 /* PreviewStateTests.swift in Sources */,
 				7E0000322C00000000000001 /* SymbolImageLoaderTests.swift in Sources */,
 				7E0000382C00000000000001 /* FolderIconMakerEmbossRendererTests.swift in Sources */,
 			);

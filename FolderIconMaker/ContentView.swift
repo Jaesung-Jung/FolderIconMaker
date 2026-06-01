@@ -5,47 +5,60 @@ import UniformTypeIdentifiers
 struct ContentView: View {
   @State private var folderStyle: FolderStyle = .empty
   @State private var symbolURL: URL?
-  @State private var renderedImage: CGImage?
+  @State private var preview = PreviewState()
+  @State private var renderTask: Task<Void, Never>?
   @State private var statusMessage = "심볼 파일을 선택하세요."
 
   var body: some View {
     HStack(spacing: 0) {
-      VStack(alignment: .leading, spacing: 16) {
-        Picker("Folder", selection: $folderStyle) {
-          ForEach(FolderStyle.allCases) { style in
-            Text(style.rawValue).tag(style)
+      VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading, spacing: 8) {
+          Text("Folder Style")
+            .font(.caption)
+            .foregroundStyle(.secondary)
+
+          Picker("Folder Style", selection: $folderStyle) {
+            ForEach(FolderStyle.allCases) { style in
+              Text(style.rawValue).tag(style)
+            }
           }
-        }
-        .pickerStyle(.segmented)
+          .labelsHidden()
+          .pickerStyle(.segmented)
 
-        Button("Choose Symbol") {
-          chooseSymbol()
-        }
+          Button {
+            chooseSymbol()
+          } label: {
+            Text("Choose Symbol")
+              .frame(maxWidth: .infinity)
+          }
 
-        Text(symbolURL?.lastPathComponent ?? "선택된 심볼 없음")
-          .font(.caption)
-          .foregroundStyle(.secondary)
-          .lineLimit(2)
-
-        Button("Render") {
-          render()
+          Text(symbolURL?.lastPathComponent ?? "선택된 심볼 없음")
+            .font(.caption)
+            .foregroundStyle(.secondary)
+            .lineLimit(1)
         }
-        .disabled(symbolURL == nil)
+        .buttonSizing(.flexible)
 
-        Button("Save PNG") {
-          savePNG()
-        }
-        .disabled(renderedImage == nil)
+        Divider()
 
-        Button("Save ICNS") {
-          saveICNS()
-        }
-        .disabled(renderedImage == nil)
+        VStack {
+          HStack {
+            Button("Save PNG") {
+              savePNG()
+            }
 
-        Button("Apply to Folder") {
-          applyToFolder()
+            Button("Save ICNS") {
+              saveICNS()
+            }
+          }
+
+          Button("Apply to Folder") {
+            applyToFolder()
+          }
+          .buttonStyle(.borderedProminent)
         }
-        .disabled(renderedImage == nil)
+        .buttonSizing(.flexible)
+        .disabled(preview.exportImage == nil || preview.isRendering)
 
         Spacer()
 
@@ -58,11 +71,11 @@ struct ContentView: View {
 
       ZStack {
         Color(nsColor: .windowBackgroundColor)
-        if let renderedImage {
+        if let image = preview.visibleImage {
           Image(
             nsImage: NSImage(
-              cgImage: renderedImage,
-              size: NSSize(width: renderedImage.width, height: renderedImage.height))
+              cgImage: image,
+              size: NSSize(width: image.width, height: image.height))
           )
           .resizable()
           .interpolation(.high)
@@ -72,13 +85,23 @@ struct ContentView: View {
           Text("Preview")
             .foregroundStyle(.secondary)
         }
+
+        if preview.isRendering {
+          ProgressView()
+            .controlSize(.large)
+        }
       }
       .frame(width: 640, height: 620)
     }
     .frame(width: 900, height: 620)
+    .onAppear {
+      refreshPreview()
+    }
     .onChange(of: folderStyle) {
-      renderedImage = nil
-      statusMessage = "다시 렌더하세요."
+      refreshPreview()
+    }
+    .onDisappear {
+      renderTask?.cancel()
     }
   }
 
@@ -88,35 +111,56 @@ struct ContentView: View {
     panel.allowsMultipleSelection = false
     panel.canChooseDirectories = false
     if panel.runModal() == .OK {
-      renderedImage = nil
       symbolURL = panel.url
-      statusMessage = "심볼 선택됨"
+      refreshPreview()
     }
   }
 
-  private func render() {
-    guard
-      let base = loadBaseImage(),
-      let symbolURL,
-      let symbol = SymbolImageLoader.loadCGImage(from: symbolURL)
-    else {
-      renderedImage = nil
-      statusMessage = "로드 실패"
+  private func refreshPreview() {
+    renderTask?.cancel()
+
+    let base = loadBaseImage()
+    preview.showBase(base)
+
+    guard let base else {
+      statusMessage = "폴더 이미지 로드 실패"
       return
     }
 
-    renderedImage = FolderIconMakerEmbossRenderer().render(base: base, symbol: symbol, settings: .default)
-    statusMessage = "렌더 완료"
+    guard let symbolURL else {
+      statusMessage = "심볼 파일을 선택하세요."
+      return
+    }
+
+    guard let symbol = SymbolImageLoader.loadCGImage(from: symbolURL) else {
+      statusMessage = "심볼 로드 실패"
+      return
+    }
+
+    preview.beginRendering(baseImage: base)
+    statusMessage = "렌더링 중..."
+    renderTask = Task { @MainActor in
+      await Task.yield()
+      if Task.isCancelled { return }
+
+      let image = await Task.detached(priority: .userInitiated) {
+        FolderIconMakerEmbossRenderer().render(base: base, symbol: symbol, settings: .default)
+      }.value
+      if Task.isCancelled { return }
+
+      preview.showRendered(image)
+      statusMessage = "렌더 완료"
+    }
   }
 
   private func savePNG() {
-    guard let renderedImage else { return }
+    guard let image = preview.exportImage else { return }
     let panel = NSSavePanel()
     panel.allowedContentTypes = [.png]
     panel.nameFieldStringValue = "FolderIconMaker.png"
     if panel.runModal() == .OK, let url = panel.url {
       do {
-        try PNGExporter.write(renderedImage, to: url)
+        try PNGExporter.write(image, to: url)
         statusMessage = "저장 완료"
       } catch {
         statusMessage = "저장 실패"
@@ -125,13 +169,13 @@ struct ContentView: View {
   }
 
   private func saveICNS() {
-    guard let renderedImage else { return }
+    guard let image = preview.exportImage else { return }
     let panel = NSSavePanel()
     panel.allowedContentTypes = [UTType(filenameExtension: "icns")!]
     panel.nameFieldStringValue = "FolderIconMaker.icns"
     if panel.runModal() == .OK, let url = panel.url {
       do {
-        try ICNSExporter.write(renderedImage, to: url)
+        try ICNSExporter.write(image, to: url)
         statusMessage = "ICNS 저장 완료"
       } catch {
         statusMessage = "ICNS 저장 실패"
@@ -140,13 +184,13 @@ struct ContentView: View {
   }
 
   private func applyToFolder() {
-    guard let renderedImage else { return }
+    guard let image = preview.exportImage else { return }
     let panel = NSOpenPanel()
     panel.canChooseFiles = false
     panel.canChooseDirectories = true
     panel.allowsMultipleSelection = false
     if panel.runModal() == .OK, let url = panel.url {
-      statusMessage = FinderIconApplier.apply(renderedImage, to: url) ? "적용 완료" : "적용 실패"
+      statusMessage = FinderIconApplier.apply(image, to: url) ? "적용 완료" : "적용 실패"
     }
   }
 
@@ -164,4 +208,8 @@ struct ContentView: View {
     var rect = CGRect(origin: .zero, size: image.size)
     return image.cgImage(forProposedRect: &rect, context: nil, hints: nil)
   }
+}
+
+#Preview {
+  ContentView()
 }
