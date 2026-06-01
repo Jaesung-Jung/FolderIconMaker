@@ -91,7 +91,9 @@ struct ContentView: View {
             .controlSize(.large)
         }
       }
+      .frame(width: 640, height: 620)
     }
+    .frame(width: 900, height: 620)
     .onAppear {
       refreshPreview()
     }
