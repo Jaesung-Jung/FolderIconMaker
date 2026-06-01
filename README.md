@@ -81,3 +81,6 @@ assets/
 ## Rendering Notes
 
 FolderIconMaker renders into a 1024 x 1024 canvas. Symbols are height-limited, centered horizontally, and blended into the folder surface with a subtle emboss-style treatment so the result feels closer to a system-rendered folder icon than a flat overlay.
+
+## License
+MIT license. See [LICENSE](https://github.com/Jaesung-Jung/FolderIconMaker/blob/main/LICENSE) for details.
